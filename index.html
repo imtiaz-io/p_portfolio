@@ -21,7 +21,7 @@
     <!-- Navigation -->
 
     
-    <nav class="flex justify-between items-center w-full mb-16 xl:mb-24">
+    <!-- <nav class="flex justify-between items-center w-full mb-16 xl:mb-24">
         <div class="text-lg font-semibold tracking-[0.2em] flex items-center gap-3">
             <div class="w-8 h-8 rounded-full border border-amber-600 flex items-center justify-center text-sm">
                 IZ
@@ -38,11 +38,126 @@
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
             Menu
         </button>
-    </nav>
+    </nav> -->
+
+
+    <!-- New Code -->
+
+<nav class="fixed top-0 left-0 w-full z-50 backdrop-blur-xl bg-black/70 border-b border-gray-800">
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+        <div class="h-20 flex justify-between items-center">
+
+            <!-- Logo -->
+
+            <div class="text-lg font-semibold tracking-[0.2em] flex items-center gap-3">
+
+                <div class="w-10 h-10 rounded-full border border-amber-500 flex items-center justify-center text-sm text-amber-400">
+
+                    IZ
+
+                </div>
+
+                <span class="hidden sm:block">
+
+                    Imtiaz · Future Chef
+
+                </span>
+
+            </div>
+
+            <!-- Desktop Navigation -->
+
+            <div class="hidden lg:flex gap-10 text-xs uppercase tracking-[0.18em] text-gray-400">
+
+                <a href="#about" class="hover:text-amber-400 transition duration-300">
+                    About
+                </a>
+
+                <a href="#skills" class="hover:text-amber-400 transition duration-300">
+                    Skills
+                </a>
+
+                <a href="#journey" class="hover:text-amber-400 transition duration-300">
+                    Journey
+                </a>
+
+                <a href="#contact" class="hover:text-amber-400 transition duration-300">
+                    Contact
+                </a>
+
+            </div>
+
+            <!-- Mobile Button -->
+
+         <!-- New add  --><button
+    id="menu-btn"
+    class="lg:hidden border border-gray-700 w-11 h-11 rounded-full flex items-center justify-center hover:bg-white hover:text-black transition"
+>
+
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+        <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+        />
+
+    </svg>
+
+</button>
+
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+                    <path stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16"/>
+
+                </svg>
+
+            </button>
+
+        </div>
+
+    </div>
+    <!-- add new -->
+     <!-- Mobile Menu -->
+
+<div
+    id="mobile-menu"
+    class="hidden lg:hidden absolute top-full left-0 w-full bg-black/95 backdrop-blur-xl border-b border-gray-800"
+>
+
+    <div class="flex flex-col py-6">
+
+        <a href="#about" class="mobile-link px-8 py-4 hover:bg-white/5">
+            About
+        </a>
+
+        <a href="#skills" class="mobile-link px-8 py-4 hover:bg-white/5">
+            Skills
+        </a>
+
+        <a href="#journey" class="mobile-link px-8 py-4 hover:bg-white/5">
+            Journey
+        </a>
+
+        <a href="#contact" class="mobile-link px-8 py-4 hover:bg-white/5">
+            Contact
+        </a>
+
+    </div>
+
+</div>
+</nav>
+
              <!-- Hero Content -->
 
 
-    <main class="flex flex-col lg:flex-row items-center justify-between flex-grow gap-12 lg:gap-8">
+    <main class="flex flex-col lg:flex-row items-center justify-between flex-grow gap-12 lg:gap-8 pt-32">
         
         <div class="w-full lg:w-1/2 space-y-8 z-10">
             <div class="inline-flex items-center border border-amber-900/50 bg-amber-900/10 text-amber-500 text-[10px] px-4 py-1.5 rounded-full uppercase tracking-widest">
@@ -466,6 +581,30 @@ class="bg-transparent border border-gray-600 text-white px-8 py-3.5 rounded-full
             </a>
         </div>
     </footer>
+    <!-- Addd javascript -->
+     <script>
+
+const menuBtn = document.getElementById("menu-btn");
+
+const mobileMenu = document.getElementById("mobile-menu");
+
+menuBtn.addEventListener("click",()=>{
+
+    mobileMenu.classList.toggle("hidden");
+
+});
+
+document.querySelectorAll(".mobile-link").forEach(link=>{
+
+    link.addEventListener("click",()=>{
+
+        mobileMenu.classList.add("hidden");
+
+    });
+
+});
+
+</script>
 </body>
 
 </html>
